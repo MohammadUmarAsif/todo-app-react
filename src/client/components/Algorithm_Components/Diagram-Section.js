@@ -1,3 +1,6 @@
+/* Component that displays the iteration diagram */
+
+// Required imports
 import React from "react";
 import "./Diagram-Section.css";
 
@@ -16,6 +19,7 @@ class Diagram extends React.Component {
     elementBoxes[29].style.borderColor = "#ae6bff";
   }
 
+  // Function to provide sample array for diagram
   prepareSample() {
     let sample = [];
     sample.push([5, 3, 8, 4, 6]);
@@ -30,7 +34,7 @@ class Diagram extends React.Component {
 
   render() {
     let array = this.prepareSample();
-
+    // JSX that lays out the diagram along with text
     return (
       <div id="diagramSection">
         <h5 className="heading">

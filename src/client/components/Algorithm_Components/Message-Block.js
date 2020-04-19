@@ -1,6 +1,9 @@
+/* Component that displays the messages to the user */
+
 import React from "react";
 import "./Message-Block.css";
 
+// Declaring globals
 const GENERATED = "Random element-list generated";
 const CREATED = "Enter elements seperated by commas";
 const EXCESS_SIZE = "Array size limited from 1 to 20";
@@ -18,8 +21,10 @@ class MessageBlock extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      display: false,
+      display: false
     };
+
+    // Binding to enable setState() in function
     this.emphasizeMessage = this.emphasizeMessage.bind(this);
   }
 
@@ -28,10 +33,11 @@ class MessageBlock extends React.Component {
     MESSAGE = document.getElementById("message");
 
     this.setState({
-      display: true,
+      display: true
     });
   }
 
+  // Function to decide if message should be emphasized
   emphasizeMessage(oldMessage) {
     if (
       oldMessage !== MESSAGE.textContent ||
@@ -55,6 +61,7 @@ class MessageBlock extends React.Component {
     }
   }
 
+  // Function to choose which message to display
   selectMessage() {
     if (
       !this.props.excessSize &&
@@ -129,6 +136,7 @@ class MessageBlock extends React.Component {
   }
 
   render() {
+    // JSX that lays out the text of the message
     return (
       <div id="messageBlock">
         <h4 id="messageHeading">Message Block</h4>

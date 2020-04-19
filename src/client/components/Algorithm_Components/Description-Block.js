@@ -1,9 +1,13 @@
+/* Component to display the information pertaining to the algorithm */
+
+// Required imports
 import React from "react";
 import DiagramSection from "./Diagram-Section.js";
 import "./Description-Block.css";
 
 class DescriptionBlock extends React.Component {
   render() {
+    // JSX that lays out the information and diagram
     return (
       <div id="descriptionBlock">
         <h4 id="descriptionHeading">Description Block</h4>

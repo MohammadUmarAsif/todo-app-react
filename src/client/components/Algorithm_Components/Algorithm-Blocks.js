@@ -1,3 +1,6 @@
+/* Component which displays all the algorithm blocks */
+
+// Required imports
 import React from "react";
 import VisualizationBlock from "./Visualization-Block.js";
 import MessageBlock from "./Message-Block.js";
@@ -27,9 +30,10 @@ class Algorithm extends React.Component {
       started: false,
       enableStart: true,
       running: false,
-      completed: "",
+      completed: ""
     };
 
+    // Binding to enable setState() in function
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
@@ -40,6 +44,7 @@ class Algorithm extends React.Component {
     DYNAMIC_DIV = document.getElementById("dynamic");
   }
 
+  // Function to handle button clicks
   handleClick() {
     if (event.target.name === "GenerateRandomElements") {
       this.setState({
@@ -47,7 +52,7 @@ class Algorithm extends React.Component {
         randomArray: this.generateRandomArray(),
         sortingOrder: "",
         enableStart: true,
-        completed: "",
+        completed: ""
       });
     } else if (event.target.name === "CreateElementList") {
       this.setState((prevState) => ({
@@ -55,25 +60,25 @@ class Algorithm extends React.Component {
         resetCreate: true,
         sortingOrder: "",
         enableStart: true,
-        completed: "",
+        completed: ""
       }));
     } else if (event.target.name === "SortingOrder") {
       this.setState((prevState) => ({
         sortClicked: !prevState.sortClicked,
         sortingOrder: "",
-        completed: "",
+        completed: ""
       }));
     } else if (event.target.name === "Ascending") {
       this.setState({
         sortingOrderBool: true,
         sortingOrder: "Ascending",
-        completed: "",
+        completed: ""
       });
     } else if (event.target.name === "Descending") {
       this.setState({
         sortingOrderBool: false,
         sortingOrder: "Descending",
-        completed: "",
+        completed: ""
       });
     } else if (event.target.name === "Start") {
       this.setState({
@@ -82,7 +87,7 @@ class Algorithm extends React.Component {
         sortingOrder: "",
         started: true,
         running: true,
-        completed: "",
+        completed: ""
       });
     } else if (event.target.name === "FullScreen") {
       if (DYNAMIC_DIV.requestFullscreen) {
@@ -94,6 +99,7 @@ class Algorithm extends React.Component {
     }
   }
 
+  // Function to handle changes in the input field
   handleChange() {
     if (event.target.name === "ElementInput") {
       let tempList = event.target.value.split(",");
@@ -112,7 +118,7 @@ class Algorithm extends React.Component {
           elementInput: tempList,
           sortingOrder: "",
           enableStart: false,
-          completed: "",
+          completed: ""
         });
       } else {
         this.setState({
@@ -120,7 +126,7 @@ class Algorithm extends React.Component {
           elementInput: tempList,
           sortingOrder: "",
           enableStart: true,
-          completed: "",
+          completed: ""
         });
       }
 
@@ -129,13 +135,13 @@ class Algorithm extends React.Component {
           excessSize: true,
           sortingOrder: "",
           enableStart: false,
-          completed: "",
+          completed: ""
         });
       } else {
         this.setState({
           excessSize: false,
           sortingOrder: "",
-          completed: "",
+          completed: ""
         });
       }
 
@@ -150,18 +156,19 @@ class Algorithm extends React.Component {
           excessValue: true,
           sortingOrder: "",
           enableStart: false,
-          completed: "",
+          completed: ""
         });
       } else {
         this.setState({
           excessValue: false,
           sortingOrder: "",
-          completed: "",
+          completed: ""
         });
       }
     }
   }
 
+  // Function to handle focus on the input field
   handleFocus() {
     if (event.target.name === "ElementInput") {
       if (!event.target.value) {
@@ -170,12 +177,13 @@ class Algorithm extends React.Component {
           elementInput: [],
           sortingOrder: "",
           enableStart: false,
-          completed: "",
+          completed: ""
         });
       }
     }
   }
 
+  // Function to change state when simulation ends
   endSimulation() {
     this.setState({
       generated: false,
@@ -183,10 +191,11 @@ class Algorithm extends React.Component {
       started: false,
       enableStart: false,
       running: false,
-      completed: "Completed",
+      completed: "Completed"
     });
   }
 
+  // Function to generate a random array
   generateRandomArray() {
     const size = Math.floor(Math.random() * 20) + 1;
     const randomArray = new Array(size);
@@ -199,6 +208,7 @@ class Algorithm extends React.Component {
   }
 
   render() {
+    // JSX that lays out all the block-components of the algorithm
     return (
       <div id="algorithmBlocks">
         <div id="dynamic">

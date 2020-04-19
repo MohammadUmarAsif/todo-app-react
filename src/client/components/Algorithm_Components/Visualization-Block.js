@@ -1,6 +1,10 @@
+/* Component that displays the visualization of the algorithm during the simulation */
+
+// Required imports
 import React from "react";
 import "./Visualization-Block.css";
 
+// Declaring globals
 let ARRAY_BARS;
 let ARRAY_VALUES;
 let HIGHLIGHT_LINES;
@@ -22,6 +26,7 @@ class VisualizationBlock extends React.Component {
   }
 
   componentDidMount() {
+    // Obtaining required DOM elements
     ARRAY_BARS = document.getElementsByClassName("visualization-array-bar");
     ARRAY_VALUES = document.getElementsByClassName("visualization-array-value");
     HIGHLIGHT_LINES = document.getElementsByClassName("highlight-line");
@@ -36,6 +41,7 @@ class VisualizationBlock extends React.Component {
     BREAK_LOOP = HIGHLIGHT_LINES[6];
   }
 
+  // Function to perform bubble sort
   bubbleSort() {
     let array;
     if (this.props.created) {
@@ -78,6 +84,7 @@ class VisualizationBlock extends React.Component {
     return [savedIndexes, array];
   }
 
+  // Function to visualize the bubble sort
   visualizeBubbleSort() {
     const [savedIndexes, array] = this.bubbleSort();
 
@@ -193,12 +200,14 @@ class VisualizationBlock extends React.Component {
     }
   }
 
+  //Funciton to reset the highlight on the 'break' line of code
   resetBreakHighlight() {
     if (MOUNTED) {
       HIGHLIGHT_LINES[6].style.borderColor = "#121212";
     }
   }
 
+  // Function to reset the colors of the visualization
   resetVisualizedArray() {
     if (MOUNTED) {
       if (this.props.started === false) {
@@ -224,6 +233,7 @@ class VisualizationBlock extends React.Component {
       this.props.resetCreate ? this.resetVisualizedArray() : null;
     }
 
+    // JSX that lays out the array element values and bars
     return (
       <div id="visualizationBlock">
         <h4 id="visualizationHeading">Visualization Block</h4>
@@ -234,7 +244,7 @@ class VisualizationBlock extends React.Component {
                 className="visualization-array-bar"
                 key={idx}
                 style={{
-                  height: `${value * 2}%`,
+                  height: `${value * 2}%`
                 }}
               ></div>
             ))}

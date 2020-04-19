@@ -1,8 +1,12 @@
+/* Component that displays the key/legend to understand the visualization block */
+
+// Required imports
 import React from "react";
 import "./Key-Block.css";
 
 class KeyBlock extends React.Component {
   render() {
+    // JSX that lays out the colors and labels
     return (
       <div id="keyBlock">
         <h4 id="keyHeading">Key Block</h4>

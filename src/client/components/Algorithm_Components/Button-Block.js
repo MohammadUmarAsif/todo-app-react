@@ -1,3 +1,6 @@
+/* Component that displays the button block */
+
+// Required imports
 import React from "react";
 import CreateElementList from "./Create-Element-List.js";
 import SortingOrder from "./Sorting-Order.js";
@@ -7,12 +10,15 @@ import "./Button-Block.css";
 class ButtonBlock extends React.Component {
   constructor(props) {
     super(props);
+
+    // Binding to enable setState() in function
     this.props.handleClick.bind(this);
     this.props.handleChange.bind(this);
     this.props.handleFocus.bind(this);
   }
 
   render() {
+    // JSX that lays out all of the buttons
     return (
       <div id="buttonBlock">
         <h4 id="buttonHeading">Button Block</h4>

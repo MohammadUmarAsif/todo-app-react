@@ -1,3 +1,5 @@
+/* Styles for the button block container */
+
 #buttonHeading {
   color: #818181;
   margin: 20px 3% 5px 3%;
@@ -19,6 +21,7 @@
   box-shadow: 0px 5px 7px #000000;
 }
 
+/* Styles for the buttons */
 .block-button {
   display: inline-block;
   background-color: transparent;

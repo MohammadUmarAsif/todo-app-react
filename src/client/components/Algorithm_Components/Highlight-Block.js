@@ -1,8 +1,12 @@
+/* Component that displays the code highlighting during simulation */
+
+// Required imports
 import React from "react";
 import "./Highlight-Block.css";
 
 class HighlightBlock extends React.Component {
   render() {
+    // JSX that lays out the lines of code
     return (
       <div id="highlightBlock">
         <h4 id="highlightHeading">Highlight Block</h4>
