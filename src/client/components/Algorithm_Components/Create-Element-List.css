@@ -1,0 +1,56 @@
+/* Styles for the input field for creating a list of elements */
+
+#create {
+  height: 100%;
+  transition: width 1.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.in-create {
+  width: 23%;
+}
+
+.out-create {
+  width: 0%;
+}
+
+#create form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#create .input-field {
+  height: 10%;
+  width: 100%;
+  line-height: 10px;
+  margin: 5px;
+  padding: 10px 0;
+}
+
+#create input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  background-color: inherit;
+  border-bottom: 2px solid #d3d3d3;
+  box-shadow: none;
+  color: #e1e1e1;
+}
+
+#create input:focus,
+#create input:valid {
+  border-color: #ae6bff;
+}
+
+#create input:invalid {
+  outline: 0;
+}
+
+#create input:disabled {
+  border-color: #818181;
+}

@@ -1,0 +1,67 @@
+/* Importing fonts from assets */
+@font-face {
+  font-family: "Raleway-ExtraLight";
+  src: url("../assets/Raleway-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "Raleway-Light";
+  src: url("../assets/Raleway-Light.ttf");
+}
+
+@font-face {
+  font-family: "Raleway-Medium";
+  src: url("../assets/Raleway-Medium.ttf");
+}
+
+/* Defining global styles */
+body {
+  font-family: "Raleway-Light";
+  font-feature-settings: "lnum";
+  font-size: 1rem;
+  background-color: #292929;
+  margin: 0;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h4,
+h5 {
+  margin-bottom: 0.5rem;
+  font-family: "Raleway-Medium";
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  line-height: inherit;
+  overflow: hidden;
+}
+
+#icon {
+  width: 24px;
+  display: flex;
+  align-items: center;
+  filter: invert();
+}
+
+#icon:active {
+  filter: none;
+}

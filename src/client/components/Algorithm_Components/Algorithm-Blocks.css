@@ -1,0 +1,32 @@
+#algorithmBlocks {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#dynamic {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#dynamic:fullscreen {
+  background-color: #292929;
+}
+
+#containerBlock {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#singleContainerBlock {
+  width: 66%;
+  margin: 0 3%;
+}
+
+#triContainerBlock {
+  width: 25%;
+  margin-right: 3%;
+  font-size: 0.92rem;
+}

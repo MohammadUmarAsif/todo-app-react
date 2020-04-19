@@ -1,0 +1,23 @@
+<!-- Main HTML file in which the transformed jsx code is inserted -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sorting Visualizer</title>
+    <link type="text/css" src="../src/client/index.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/javascript" src="../src/client/index.js"></script>
+
+    <!-- Function to remove active-outline on buttons -->
+    <script type="text/javascript">
+      document.addEventListener("click", function (e) {
+        if (document.activeElement.toString() == "[object HTMLButtonElement]") {
+          document.activeElement.blur();
+        }
+      });
+    </script>
+  </body>
+</html>
