@@ -1,7 +1,7 @@
 {
-  "name": "sorting-visualizer",
+  "name": "todo-app-react",
   "version": "1.0.0",
-  "description": "Single-page web-application to simulate and visualize the Bubble-Sort algorithm",
+  "description": "Simple react todo app with limited functionality",
   "main": "src/server/index.js",
   "scripts": {
     "build": "webpack --mode production",
