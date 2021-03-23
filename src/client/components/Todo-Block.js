@@ -1,5 +1,4 @@
 import React from "react";
-import Button from 'react-bootstrap/Button'
 import Todo from './Todo.js';
 import Add from './Add.js';
 import "./Todo-Block.css";
@@ -52,9 +51,9 @@ class TodoBlock extends React.Component {
 
     add(text) {
 
-        let d = new Date();
+        let date = new Date();
 
-        let temp = [[text, d.toDateString(), false]];
+        let temp = [[text, date.toDateString(), false]];
         temp = temp.concat(this.state.todos);
 
         this.setState({
