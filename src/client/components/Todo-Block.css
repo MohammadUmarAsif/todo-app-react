@@ -1,0 +1,8 @@
+#todoHeading {
+  color: #818181;
+  margin: 1% 1%;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.1em;
+  word-spacing: 0.25em;
+  text-transform: uppercase;
+}

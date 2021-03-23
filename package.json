@@ -13,9 +13,14 @@
   "author": "Mohammad Umar Asif",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "babel-polyfill": "^6.26.0",
+    "bootstrap": "^3.4.1",
     "express": "^4.17.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {

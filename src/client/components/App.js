@@ -1,17 +1,15 @@
-/* App Component that is rendered to the HTML 'app' div */
-
-// Required imports
 import React from "react";
-import Header from "./Application_Header/Header.js";
-import AlgorithmBlocks from "./Algorithm_Components/Algorithm-Blocks.js";
 import "./App.css";
+import TodoBlock from './Todo-Block.js';
+import Button from 'react-bootstrap/Button';
 
 class App extends React.Component {
+
+
   render() {
     return (
       <div>
-        <Header />
-        <AlgorithmBlocks />
+        <TodoBlock/>
       </div>
     );
   }

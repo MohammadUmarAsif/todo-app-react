@@ -1,17 +1,19 @@
-<!-- Main HTML file in which the transformed jsx code is inserted -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Sorting Visualizer</title>
+    <title>Todo App</title>
+    <link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous"
+/>
     <link type="text/css" src="../src/client/index.css" />
   </head>
   <body>
     <div id="root"></div>
     <script type="text/javascript" src="../src/client/index.js"></script>
-
-    <!-- Function to remove active-outline on buttons -->
     <script type="text/javascript">
       document.addEventListener("click", function (e) {
         if (document.activeElement.toString() == "[object HTMLButtonElement]") {
